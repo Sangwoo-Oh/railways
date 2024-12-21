@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAYS</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <section class="menu_screen">
+        <div class="inner_wrap">
+            <h1>
+                <img src="assets/images/game_title.png" alt="RAILWAYS">
+            </h1>
+            <div class="setting">
+                <input type="text" placeholder="WHO ARE YOU?">
+                <div class="setting_wrap">
+                    <div class="difficulty">
+                        <p>SEE THE DIFFICULTY!</p>
+                        <div class="diff_buttons">
+                            <button class="button_easy" name="easy">5 x 5</button>
+                            <button class="button_hard" name="hard">7 x 7</button>
+                        </div>
+                    </div>
+                    <div class="startgame">
+                        <button class="button_rule">RULES</button>
+                        <button class="button_start">START GAME</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="rule">
+            <div>
+                <p>Left click : Place tile</p>
+                <p>Right click : Rotate tile</p>
+                <p>Double click : Change tile</p>
+                <button class="back_to_menu">back to Menu</button>
+            </div>
+        </section>
+    </section>
+    <section class="game_screen">
+        <div class="inner_wrap">
+            <div class="left">
+                <h2>
+                    <img src="assets/images/game_title.png" alt="RAILWAYS">
+                </h2>
+                <div class="info">
+                    <p class="small">ROUTE DESIGNER:</p>
+                    <p class="name">NAME</p>
+                    <span class="line"></span>
+                    <p class="small">ELAPSED TIME</p>
+                    <p class="time">20:00</p>
+                </div>
+            </div>
+            <div class="right">
+                <canvas width="440px" height="440px"></canvas>
+            </div>
+        </div>
+        <div class="result">
+            <p>Congrats!</p>
+            <p class="record">Your time: 15:19</p>
+            <h3>LEADING BOARD</h3>
+            <div class="leading_board">
+                <table class="easy">
+                    <caption>EASY</caption>
+                    <tr>
+                        <td>1</td>
+                        <td>name</td>
+                        <td>time</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>name</td>
+                        <td>time</td>
+                    </tr>
+                </table>
+                <table class="hard">
+                    <caption>HARD</caption>
+                    <tr>
+                        <td>1</td>
+                        <td>name</td>
+                        <td>time</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>name</td>
+                        <td>time</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="back_to_menu">back to Menu</button>
+        </div>
+    </section>
+    <script src="index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+@charset "UTF-8";
+
+@import 'reset';
+
+// main
+body {
+    .menu_screen, .game_screen {
+        width: 768px;
+        height: 460px;
+        margin: 0 auto;
+        background-color: #F5F6E8;
+        padding: 2rem 0;
+        background-image: url(../assets/images/menu_railway.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 420px;
+    }
+    .menu_screen {
+        position: relative;
+        .inner_wrap {
+            max-width: 80%;
+            margin: 0 auto; 
+            h1 {
+                margin-bottom: 2rem;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .setting {
+                margin-bottom: 2rem;
+                input {
+                    width: 100%;
+                    border-radius: 10px;
+                    font-size: 1.5rem;
+                    padding: 10px 15px;
+                    margin-bottom: 2rem;
+                    box-sizing: border-box;
+                }
+                .setting_wrap {
+                    display: flex;
+                    flex: 5;
+                    gap: 2rem;
+                    .difficulty {
+                        flex: 3;
+                        border-radius: 10px;
+                        font-size: 1.5rem;
+                        padding: 15px 15px 25px 15px;
+                        background-color: #FFF;
+                        border: 2px solid #AD9255;
+                        p {
+                            margin-bottom: 1rem;
+                            text-align: center;
+                        }
+                        .diff_buttons {
+                            display: flex;
+                            gap: 1rem;
+                            button {
+                                cursor: pointer;
+                                border-radius: 10px;
+                                font-size: 1.5rem;
+                                padding: 15px;
+                                width: 100%;
+                                position: relative;
+                                &:valid:hover, &.active {
+                                    background-color: #AD9255;
+                                    color: #FFF;
+                                    &::after {
+                                        color : #000;
+                                    }
+                                }
+                                &::after {
+                                    bottom: -20px;
+                                    left: 0;
+                                    right: 0;
+                                    font-size: 0.8rem;
+                                }
+                                &:first-child {
+                                    &::after {
+                                        content: "EASY";
+                                        position: absolute;
+                                    }
+                                }
+                                &:last-child {
+                                    &::after {
+                                        content: 'HARD';
+                                        position: absolute;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .startgame {
+                        flex: 2;
+                        button {
+                            cursor: pointer;
+                            display: block;
+                            border-radius: 10px;
+                            font-size: 1.5rem;
+                            padding: 15px;
+                            width: 100%;
+                            position: relative;
+                            &:first-child {
+                                margin-bottom: 22px;
+                            }
+                            &:valid:hover {
+                                background-color: #AD9255;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .rule {
+            display: none;
+            border-radius: 15px;
+            background-color: #F5F6E8;
+            border: solid 15px #AD9255;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                p {
+                    color: #AD9255;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+                button {
+                    cursor: pointer;
+                    width: 150px;
+                    display: block;
+                    margin: 0 auto;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    padding: 5px;
+                    position: relative;
+                    margin-top: 1rem;
+                    border: solid 2px #AD9255;
+                    &:valid:hover {
+                        background-color: #AD9255;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+    
+    .game_screen {
+        display: none;
+    }
+
+    .game_screen {  
+        position: relative;
+        .inner_wrap {
+            display: flex;
+            flex: 6;
+            gap: 1rem;
+            max-width: 90%;
+            margin: 0 auto;
+            .left {
+                h2 {
+                    margin-bottom: 15px;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .info {
+                    border-radius: 10px;
+                    background-color: #FFF;
+                    border: solid 2px #AD9255;
+                    padding: 15px;
+                    text-align: center;
+                    margin-bottom: 15px;
+                    .small {
+                        font-size: 1rem;
+                        margin-bottom: 10px;
+                    }
+                    .name, .time {
+                        font-size: 2rem;
+                        font-weight: bold;
+                    }
+                    .line {
+                        display: block;
+                        height: 1px;
+                        background-color: #AD9255;
+                        margin: 10px 0;
+                    }
+                }
+
+                .tiles {
+                    border-radius: 10px;
+                    background-color: #FFF;
+                    border: solid 2px #AD9255;
+                    padding: 15px;
+                    text-align: center;
+                    ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 15px;
+                        justify-content: center;
+                        li {
+                            width: 80px;
+                            height: 80px;
+                            img {
+                                width: 100%;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .right {
+                border: solid 10px #AD9255;
+                border-radius: 10px;
+                width: 440px;
+                height: 440px;
+                canvas {
+                    background-color: #FFF;
+                }
+            }
+        }
+        .result {
+            display: none;
+            border-radius: 15px;
+            background-color: #F5F6E8;
+            border: solid 15px #AD9255;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 500px;
+            height: 350px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            p {
+                color: #AD9255;
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                text-align: center;
+                &.record {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+            }
+            h3 {
+                color: #AD9255;
+                text-align: center;
+            }
+            .leading_board {
+                margin-bottom: 15px;
+                caption {
+                    color: #AD9255;
+                }
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                table {
+                    border: solid 2px #AD9255;
+                    background-color: #FFF;
+                    border-radius: 15px;
+                    th, td {
+                        border: solid 2px #AD9255;
+                        padding: 5px;
+                    }
+                }
+            }
+            button {
+                cursor: pointer;
+                width: 150px;
+                display: block;
+                margin: 0 auto;
+                border-radius: 10px;
+                font-size: 1rem;
+                padding: 5px;
+                position: relative;
+                margin-top: 1rem;
+                border: solid 2px #AD9255;
+                &:valid:hover {
+                    background-color: #AD9255;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

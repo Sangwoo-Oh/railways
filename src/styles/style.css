@@ -1,0 +1,345 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body .menu_screen, body .game_screen {
+  width: 768px;
+  height: 460px;
+  margin: 0 auto;
+  background-color: #F5F6E8;
+  padding: 2rem 0;
+  background-image: url(../assets/images/menu_railway.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 420px;
+}
+body .menu_screen {
+  position: relative;
+}
+body .menu_screen .inner_wrap {
+  max-width: 80%;
+  margin: 0 auto;
+}
+body .menu_screen .inner_wrap h1 {
+  margin-bottom: 2rem;
+}
+body .menu_screen .inner_wrap h1 img {
+  width: 100%;
+  display: block;
+}
+body .menu_screen .inner_wrap .setting {
+  margin-bottom: 2rem;
+}
+body .menu_screen .inner_wrap .setting input {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap {
+  display: flex;
+  flex: 5;
+  gap: 2rem;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty {
+  flex: 3;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 15px 15px 25px 15px;
+  background-color: #FFF;
+  border: 2px solid #AD9255;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty p {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons {
+  display: flex;
+  gap: 1rem;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button {
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button:valid:hover, body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button.active {
+  background-color: #AD9255;
+  color: #FFF;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button:valid:hover::after, body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button.active::after {
+  color: #000;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button::after {
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  font-size: 0.8rem;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button:first-child::after {
+  content: "EASY";
+  position: absolute;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .difficulty .diff_buttons button:last-child::after {
+  content: "HARD";
+  position: absolute;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .startgame {
+  flex: 2;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .startgame button {
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .startgame button:first-child {
+  margin-bottom: 22px;
+}
+body .menu_screen .inner_wrap .setting .setting_wrap .startgame button:valid:hover {
+  background-color: #AD9255;
+  color: #FFF;
+}
+body .menu_screen .rule {
+  display: none;
+  border-radius: 15px;
+  background-color: #F5F6E8;
+  border: solid 15px #AD9255;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+body .menu_screen .rule div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+body .menu_screen .rule div p {
+  color: #AD9255;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+body .menu_screen .rule div button {
+  cursor: pointer;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 5px;
+  position: relative;
+  margin-top: 1rem;
+  border: solid 2px #AD9255;
+}
+body .menu_screen .rule div button:valid:hover {
+  background-color: #AD9255;
+  color: #FFF;
+}
+body .game_screen {
+  display: none;
+}
+body .game_screen {
+  position: relative;
+}
+body .game_screen .inner_wrap {
+  display: flex;
+  flex: 6;
+  gap: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+body .game_screen .inner_wrap .left h2 {
+  margin-bottom: 15px;
+}
+body .game_screen .inner_wrap .left h2 img {
+  width: 100%;
+  display: block;
+}
+body .game_screen .inner_wrap .left .info {
+  border-radius: 10px;
+  background-color: #FFF;
+  border: solid 2px #AD9255;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+body .game_screen .inner_wrap .left .info .small {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+body .game_screen .inner_wrap .left .info .name, body .game_screen .inner_wrap .left .info .time {
+  font-size: 2rem;
+  font-weight: bold;
+}
+body .game_screen .inner_wrap .left .info .line {
+  display: block;
+  height: 1px;
+  background-color: #AD9255;
+  margin: 10px 0;
+}
+body .game_screen .inner_wrap .left .tiles {
+  border-radius: 10px;
+  background-color: #FFF;
+  border: solid 2px #AD9255;
+  padding: 15px;
+  text-align: center;
+}
+body .game_screen .inner_wrap .left .tiles ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+body .game_screen .inner_wrap .left .tiles ul li {
+  width: 80px;
+  height: 80px;
+}
+body .game_screen .inner_wrap .left .tiles ul li img {
+  width: 100%;
+  display: block;
+}
+body .game_screen .inner_wrap .right {
+  border: solid 10px #AD9255;
+  border-radius: 10px;
+  width: 440px;
+  height: 440px;
+}
+body .game_screen .inner_wrap .right canvas {
+  background-color: #FFF;
+}
+body .game_screen .result {
+  display: none;
+  border-radius: 15px;
+  background-color: #F5F6E8;
+  border: solid 15px #AD9255;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+body .game_screen .result p {
+  color: #AD9255;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+body .game_screen .result p.record {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+body .game_screen .result h3 {
+  color: #AD9255;
+  text-align: center;
+}
+body .game_screen .result .leading_board {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+body .game_screen .result .leading_board caption {
+  color: #AD9255;
+}
+body .game_screen .result .leading_board table {
+  border: solid 2px #AD9255;
+  background-color: #FFF;
+  border-radius: 15px;
+}
+body .game_screen .result .leading_board table th, body .game_screen .result .leading_board table td {
+  border: solid 2px #AD9255;
+  padding: 5px;
+}
+body .game_screen .result button {
+  cursor: pointer;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 5px;
+  position: relative;
+  margin-top: 1rem;
+  border: solid 2px #AD9255;
+}
+body .game_screen .result button:valid:hover {
+  background-color: #AD9255;
+  color: #FFF;
+}/*# sourceMappingURL=style.css.map */
